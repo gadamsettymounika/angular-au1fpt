@@ -1,0 +1,43 @@
+/* seat-booking.component.css */
+.seat-map {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.seat-map div {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.booked {
+  color: red;
+}
+
+.available {
+  color: green;
+}
+
+span {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+/* Legend Styling */
+.seat-legend {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.seat-legend span {
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.available-legend {
+  color: green;
+}
+
+.booked-legend {
+  color: red;
+}

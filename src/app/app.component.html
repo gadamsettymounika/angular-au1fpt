@@ -1,0 +1,32 @@
+<!-- seat-booking.component.html -->
+<div>
+  <h1>Seat Booking System</h1>
+
+  <div>
+    <label for="numSeats">Number of seats to book:</label>
+    <input id="numSeats" type="number" #numSeatsInput />
+    <button (click)="bookSeats(numSeatsInput.value)">Book Seats</button>
+  </div>
+
+  <div *ngIf="message">
+    <p>{{ message }}</p>
+  </div>
+
+  <!-- Add a seat color representation legend -->
+  <div class="seat-legend">
+    <span class="available-legend">🟢 Available</span>
+    <span class="booked-legend">🔴 Booked</span>
+  </div>
+
+  <!-- Display seat map -->
+  <div class="seat-map">
+    <div *ngFor="let row of seats">
+      <span
+        *ngFor="let seat of row"
+        [ngClass]="{ booked: seat === 1, available: seat === 0 }"
+      >
+        {{ seat === 0 ? '🟢' : '🔴' }}
+      </span>
+    </div>
+  </div>
+</div>
